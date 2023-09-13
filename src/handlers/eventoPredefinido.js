@@ -1,4 +1,4 @@
-const { getAllEPredefinido, addEPredefinido } = require("../controllers/EventoPredefinido")
+const { getAllEPredefinido, addEPredefinido } = require("../controllers/eventoPredefinido")
 
 
 module.exports={
@@ -7,7 +7,7 @@ module.exports={
             const response = await getAllEPredefinido();
             res.status(200).json({
                 results:response
-            });
+            }); 
         } catch (error) {
             res.status(404).json({error: error.message})
         }
